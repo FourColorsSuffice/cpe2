@@ -3,21 +3,21 @@ pipeline {
 	stages {
 		stage('Source') {
 			steps {
-            git branch: 'master',
-                url: 'https://github.com/fourcolorssuffice/cpe2.git'
-      }
+            			git branch: 'master',
+                		url: 'https://github.com/fourcolorssuffice/cpe2.git'
+      			}
 		}
-    stage('Build') {
+    		stage('Build') {
 			steps {
 				sh 'npm install'
 			}
-	  }
-    stage('Test') {
-		  steps {
+	  	}
+    		stage('Test') {
+			steps {
 				echo 'testing...'
 			}
 		}
-    stage('Deploy') {
+    		stage('Deploy') {
 			steps {
 				sh 'npm start'
 			}
